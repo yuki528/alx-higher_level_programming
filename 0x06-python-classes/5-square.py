@@ -2,7 +2,8 @@
 """Square module.
 This module contains a class that defines a square and its size and checking
 if the given values are right, and a setter and getter methods to set or get
-it. There's also an area method that returns the area of the square.
+it. There's also an area method that returns the area of the square, another
+one that handles the print of the square.
 """
 
 
@@ -33,5 +34,12 @@ class Square():
 
     def area(self):
         """Returns the current square area."""
-
         return self.__size ** 2
+
+    def my_print(self):
+        """Prints the square with the # character on stdout."""
+        if self.__size > 0:
+            for x in range(self.__size):
+                print('#' * self.__size)
+        else:
+            print()
